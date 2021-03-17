@@ -57,6 +57,9 @@ steps:
 - task: WhiteSource@21
   displayName: 'Run WhiteSource Bolt'
 
+- task: WhiteSource@21
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
